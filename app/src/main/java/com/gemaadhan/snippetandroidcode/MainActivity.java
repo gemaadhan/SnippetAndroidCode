@@ -15,21 +15,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<String> city =  new ArrayList<>();
-        city.add("Tokyo");
-        city.add("Beijing");
-        city.add("San Francisco");
-        city.add("Milan");
-        city.add("Paris");
-        city.add("London");
-        city.add("Liverpool");
-        city.add("Manchester");
-        city.add("New Dheli");
-        city.add("Manila");
+        ArrayList<City> city =  new ArrayList<City>();
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
+        city.add(new City(7.7, "Tokyo",1515196780));
 
+
+        CityAdapter adapter = new CityAdapter(this, city);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, city);
         ListView cityListView = (ListView) findViewById(R.id.list);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, city);
         cityListView.setAdapter(adapter);
     }
 }
