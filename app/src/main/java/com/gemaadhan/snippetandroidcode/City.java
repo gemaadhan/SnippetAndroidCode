@@ -48,7 +48,7 @@ public class City {
     public String getmTimeString() {
         Calendar cal = Calendar.getInstance(Locale.ENGLISH);
         cal.setTimeInMillis(mTime);
-        String date = DateFormat.format("dd-MM-yyyy hh:mm:ss", cal).toString();
+        String date = DateFormat.format("dd MMMM yyyy", cal).toString();
         return date;
     }
 }

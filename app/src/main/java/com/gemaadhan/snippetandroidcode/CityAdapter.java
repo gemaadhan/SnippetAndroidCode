@@ -11,6 +11,8 @@ import java.util.ArrayList;
 
 public class CityAdapter extends ArrayAdapter<City> {
 
+    public static String currentCity;
+
     public CityAdapter(Activity context, ArrayList<City> City) {
         super(context, 0, City);
     }
@@ -33,5 +35,6 @@ public class CityAdapter extends ArrayAdapter<City> {
         timeTextView.setText(currentCity.getmTimeString());
 
         return listItemView;
+        
     }
 }
