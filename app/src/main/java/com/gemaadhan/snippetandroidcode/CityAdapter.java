@@ -26,13 +26,13 @@ public class CityAdapter extends ArrayAdapter<City> {
 
         City currentCity  = getItem(position);
         TextView magTextView = (TextView) listItemView.findViewById(R.id.list_item_mag);
-        magTextView.setText(currentCity.getmMagString());
+        magTextView.setText(currentCity.getmMag());
 
         TextView cityTextView = (TextView) listItemView.findViewById(R.id.list_item_city);
         cityTextView.setText(currentCity.getmCityName());
 
         TextView timeTextView = (TextView) listItemView.findViewById(R.id.list_item_time);
-        timeTextView.setText(currentCity.getmTimeString());
+        timeTextView.setText(currentCity.getmTime());
 
         return listItemView;
         

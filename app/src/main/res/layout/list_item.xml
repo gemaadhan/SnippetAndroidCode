@@ -11,13 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/list_item_mag"
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:gravity="center"
-            />
+            >
+
+            <TextView
+                android:id="@+id/list_item_mag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/circlered"
+                android:hint="7.8" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/list_item_city"
@@ -25,8 +33,7 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center_vertical"
-            android:paddingLeft="32dp"
-            />
+            android:paddingLeft="32dp" />
 
         <TextView
             android:id="@+id/list_item_time"

@@ -15,31 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        ArrayList<City> city =  new ArrayList<City>();
-        city.add(new City(7.7, "TokyoTokyoTokyoTokyoTokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-        city.add(new City(7.7, "Tokyo",1515196780));
-
-
+        ArrayList<City> city = QueryUtils.extractCity();
 
 
         CityAdapter adapter = new CityAdapter(this, city);

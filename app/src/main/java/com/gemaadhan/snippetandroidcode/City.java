@@ -6,17 +6,17 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class City {
-    private Double mMag;
+    private String mMag;
     private String mCityName;
-    private int mTime;
+    private String mTime;
 
-    public City(Double mMag, String mCityName, int mTime) {
+    public City(String mMag, String mCityName, String mTime) {
         this.mMag = mMag;
         this.mCityName = mCityName;
         this.mTime = mTime;
     }
 
-    public Double getmMag() {
+    public String getmMag() {
         return mMag;
     }
 
@@ -24,11 +24,11 @@ public class City {
         return mCityName;
     }
 
-    public int getmTime() {
+    public String getmTime() {
         return mTime;
     }
 
-    public void setmMag(Double mMag) {
+    public void setmMag(String mMag) {
         this.mMag = mMag;
     }
 
@@ -36,19 +36,8 @@ public class City {
         this.mCityName = mCityName;
     }
 
-    public void setmTime(int mTime) {
+    public void setmTime(String mTime) {
         this.mTime = mTime;
     }
 
-    //Convert Double mMag into String
-    public String getmMagString() {
-        return Double.toString(mMag);
-    }
-    //Convert Unix mTIme into String
-    public String getmTimeString() {
-        Calendar cal = Calendar.getInstance(Locale.ENGLISH);
-        cal.setTimeInMillis(mTime);
-        String date = DateFormat.format("dd MMMM yyyy", cal).toString();
-        return date;
-    }
 }
