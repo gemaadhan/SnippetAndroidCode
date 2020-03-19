@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
         city.add(new City(7.7, "Tokyo",1515196780));
 
 
-
-
         CityAdapter adapter = new CityAdapter(this, city);
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, city);
         ListView cityListView = (ListView) findViewById(R.id.list);
