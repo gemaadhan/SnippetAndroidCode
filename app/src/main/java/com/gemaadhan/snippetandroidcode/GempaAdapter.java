@@ -9,12 +9,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class CityAdapter extends ArrayAdapter<City> {
+public class GempaAdapter extends ArrayAdapter<Gempa> {
 
-    public static String currentCity;
 
-    public CityAdapter(Activity context, ArrayList<City> City) {
-        super(context, 0, City);
+    public GempaAdapter(Activity context, ArrayList<Gempa> Gempa) {
+        super(context, 0, Gempa);
     }
 
     @Override
@@ -24,17 +23,24 @@ public class CityAdapter extends ArrayAdapter<City> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        City currentCity  = getItem(position);
+        Gempa currentGempa  = getItem(position);
         TextView magTextView = (TextView) listItemView.findViewById(R.id.list_item_mag);
-        magTextView.setText(currentCity.getmMagString());
+
+        magTextView.setText(getmMagString(currentGempa.getmMag()));
 
         TextView cityTextView = (TextView) listItemView.findViewById(R.id.list_item_city);
-        cityTextView.setText(currentCity.getmCityName());
+        cityTextView.setText(currentGempa.getmCityName());
 
         TextView timeTextView = (TextView) listItemView.findViewById(R.id.list_item_time);
-        timeTextView.setText(currentCity.getmTimeString());
+        timeTextView.setText(currentGempa.getmTime());
 
         return listItemView;
         
     }
+
+    public String getmMagString(Double getmMag){
+        return getmMag.toString();
+    }
+
+
 }
