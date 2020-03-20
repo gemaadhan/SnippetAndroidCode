@@ -9,11 +9,12 @@ public class Gempa {
     private Double mMag;
     private String mCityName;
     private long mTime;
-
-    public Gempa(Double mMag, String mCityName, long mTime) {
+    private String murl;
+    public Gempa(Double mMag, String mCityName, long mTime, String murl) {
         this.mMag = mMag;
         this.mCityName = mCityName;
         this.mTime = mTime;
+        this.murl = murl;
     }
 
     public Double getmMag() {
@@ -40,5 +41,11 @@ public class Gempa {
         this.mTime = mTime;
     }
 
+    public String getmUrl() {
+        return murl;
+    }
 
+    public void setMurl(String murl) {
+        this.murl = murl;
+    }
 }
