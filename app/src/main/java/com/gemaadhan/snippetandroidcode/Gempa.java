@@ -8,9 +8,9 @@ import java.util.Locale;
 public class Gempa {
     private Double mMag;
     private String mCityName;
-    private String mTime;
+    private long mTime;
 
-    public Gempa(Double mMag, String mCityName, String mTime) {
+    public Gempa(Double mMag, String mCityName, long mTime) {
         this.mMag = mMag;
         this.mCityName = mCityName;
         this.mTime = mTime;
@@ -24,7 +24,7 @@ public class Gempa {
         return mCityName;
     }
 
-    public String getmTime() {
+    public long getmTime() {
         return mTime;
     }
 
@@ -36,7 +36,7 @@ public class Gempa {
         this.mCityName = mCityName;
     }
 
-    public void setmTime(String mTime) {
+    public void setmTime(long mTime) {
         this.mTime = mTime;
     }
 

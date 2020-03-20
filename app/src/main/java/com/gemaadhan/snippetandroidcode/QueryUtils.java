@@ -38,7 +38,7 @@ public final class QueryUtils {
 
                 Double mag = properties.getDouble("mag");
                 String place = properties.getString("place");
-                String time = properties.getString("time");
+                long time = properties.getLong("time");
 
                 Gempa gempa = new Gempa(mag,place,time);
                 gempas.add(gempa);
